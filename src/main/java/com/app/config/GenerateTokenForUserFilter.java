@@ -32,7 +32,15 @@ public class GenerateTokenForUserFilter extends AbstractAuthenticationProcessing
         this.tokenUtil = tokenUtil;
     }
 
-    @Override
+    public TokenUtil getTokenUtil() {
+		return tokenUtil;
+	}
+
+	public void setTokenUtil(TokenUtil tokenUtil) {
+		this.tokenUtil = tokenUtil;
+	}
+
+	@Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, IOException, ServletException, JSONException {
         try{
             String jsonString = IOUtils.toString(request.getInputStream(), "UTF-8");
@@ -40,9 +48,9 @@ public class GenerateTokenForUserFilter extends AbstractAuthenticationProcessing
             JSONObject userJSON = new JSONObject(jsonString);
             String username = userJSON.getString("username");
             String password = userJSON.getString("password");
-            String browser = request.getHeader("User-Agent")!= null?request.getHeader("User-Agent"):"";
-            String ip = request.getRemoteAddr();
-            log.info("\nip:{} \nbrowser:{} \n----",ip,browser);
+            //String browser = request.getHeader("User-Agent")!= null?request.getHeader("User-Agent"):"";
+            //String ip = request.getRemoteAddr();
+            //log.info("\nip:{} \nbrowser:{} \n----",ip,browser);
 
             //final UsernamePasswordAuthenticationToken loginToken = new UsernamePasswordAuthenticationToken("demo", "demo");
             final UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(username, password);

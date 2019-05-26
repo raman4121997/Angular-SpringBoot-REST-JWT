@@ -16,4 +16,12 @@ public class OperationResponse {
   @ApiModelProperty(required = true)
   private ResponseStatusEnum  operationStatus;
   private String  operationMessage;
+public void setOperationStatus(ResponseStatusEnum error) {
+	// TODO Auto-generated method stub
+	
+}
+public void setOperationMessage(String message) {
+	// TODO Auto-generated method stub
+	
+}
 }

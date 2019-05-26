@@ -34,7 +34,79 @@ public class PageResponse extends OperationResponse {
     }
   }
 
-  public void setPageTotal(int count, boolean setDefaultMessage){
+  public boolean isFirst() {
+	return first;
+}
+
+public void setFirst(boolean first) {
+	this.first = first;
+}
+
+public boolean isLast() {
+	return last;
+}
+
+public void setLast(boolean last) {
+	this.last = last;
+}
+
+public int getCurrentPageNumber() {
+	return currentPageNumber;
+}
+
+public void setCurrentPageNumber(int currentPageNumber) {
+	this.currentPageNumber = currentPageNumber;
+}
+
+public int getItemsInPage() {
+	return itemsInPage;
+}
+
+public void setItemsInPage(int itemsInPage) {
+	this.itemsInPage = itemsInPage;
+}
+
+public int getPageSize() {
+	return pageSize;
+}
+
+public void setPageSize(int pageSize) {
+	this.pageSize = pageSize;
+}
+
+public int getTotalPages() {
+	return totalPages;
+}
+
+public void setTotalPages(int totalPages) {
+	this.totalPages = totalPages;
+}
+
+public long getTotalItems() {
+	return totalItems;
+}
+
+public void setTotalItems(long totalItems) {
+	this.totalItems = totalItems;
+}
+
+public Sort getSort() {
+	return sort;
+}
+
+public void setSort(Sort sort) {
+	this.sort = sort;
+}
+
+public List getItems() {
+	return items;
+}
+
+public void setItems(List items) {
+	this.items = items;
+}
+
+public void setPageTotal(int count, boolean setDefaultMessage){
     //this.items             = list;
     this.first             = true;
     this.last              = true;
@@ -47,5 +119,15 @@ public class PageResponse extends OperationResponse {
       this.setOperationMessage("Total " + count + " items ");
     }
   }
+
+public void setOperationMessage(String string) {
+	// TODO Auto-generated method stub
+	
+}
+
+public void setOperationStatus(ResponseStatusEnum success) {
+	// TODO Auto-generated method stub
+	
+}
 
 }

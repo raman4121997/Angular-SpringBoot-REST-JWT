@@ -17,7 +17,167 @@ public class User {
     @Getter @Setter private String lastName;
     @Getter @Setter private String email;
 
-    @JsonIgnore @Getter @Setter private int    securityProviderId;
+    public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getSecurityProviderId() {
+		return securityProviderId;
+	}
+
+	public void setSecurityProviderId(int securityProviderId) {
+		this.securityProviderId = securityProviderId;
+	}
+
+	public int getDefaultCustomerId() {
+		return defaultCustomerId;
+	}
+
+	public void setDefaultCustomerId(int defaultCustomerId) {
+		this.defaultCustomerId = defaultCustomerId;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddress1() {
+		return address1;
+	}
+
+	public void setAddress1(String address1) {
+		this.address1 = address1;
+	}
+
+	public String getAddress2() {
+		return address2;
+	}
+
+	public void setAddress2(String address2) {
+		this.address2 = address2;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getPostal() {
+		return postal;
+	}
+
+	public void setPostal(String postal) {
+		this.postal = postal;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+
+	public boolean isBlocked() {
+		return isBlocked;
+	}
+
+	public void setBlocked(boolean isBlocked) {
+		this.isBlocked = isBlocked;
+	}
+
+	public String getSecretQuestion() {
+		return secretQuestion;
+	}
+
+	public void setSecretQuestion(String secretQuestion) {
+		this.secretQuestion = secretQuestion;
+	}
+
+	public String getSecretAnswer() {
+		return secretAnswer;
+	}
+
+	public void setSecretAnswer(String secretAnswer) {
+		this.secretAnswer = secretAnswer;
+	}
+
+	public boolean isEnableBetaTesting() {
+		return enableBetaTesting;
+	}
+
+	public void setEnableBetaTesting(boolean enableBetaTesting) {
+		this.enableBetaTesting = enableBetaTesting;
+	}
+
+	public boolean isEnableRenewal() {
+		return enableRenewal;
+	}
+
+	public void setEnableRenewal(boolean enableRenewal) {
+		this.enableRenewal = enableRenewal;
+	}
+
+	@JsonIgnore @Getter @Setter private int    securityProviderId;
     @JsonIgnore @Getter @Setter private int    defaultCustomerId;
 
     @JsonIgnore @Getter @Setter private String phone;
